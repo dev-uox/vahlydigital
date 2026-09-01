@@ -40,6 +40,7 @@ export default function Modals({
 
   const [searchQuery, setSearchQuery] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   React.useEffect(() => {
     if (activeModal) {
@@ -57,13 +58,51 @@ export default function Modals({
 
   if (!activeModal) return null;
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      onClose();
-    }, 2800);
+    setIsSubmitting(true);
+
+    try {
+      const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+      if (accessKey) {
+        await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json'
+          },
+          body: JSON.stringify({
+            access_key: accessKey,
+            subject: `New Digital Strategy Request: ${formData.name || 'Valued Partner'}`,
+            from_name: 'Vahlay Digital Strategy Portal',
+            name: formData.name,
+            phone: formData.phone,
+            email: formData.email || 'Not specified',
+            company: formData.company || 'Not specified',
+            service: formData.service || 'Brand Launch Studio',
+            timeline: formData.timeline,
+            message: formData.message || 'Strategy consultation requested via website modal'
+          })
+        });
+      }
+      // Backup lead to browser storage
+      try {
+        const stored = JSON.parse(localStorage.getItem('vahlay_leads') || '[]');
+        stored.push({ ...formData, timestamp: new Date().toISOString() });
+        localStorage.setItem('vahlay_leads', JSON.stringify(stored));
+      } catch (err) {
+        // ignore localStorage errors
+      }
+    } catch (err) {
+      console.error('Submission error:', err);
+    } finally {
+      setIsSubmitting(false);
+      setSubmitted(true);
+      setTimeout(() => {
+        setSubmitted(false);
+        onClose();
+      }, 3500);
+    }
   };
 
   const agencyServicesList = [
@@ -187,9 +226,9 @@ export default function Modals({
                   </div>
 
                   <div className="modal-submit-row full-span">
-                    <button type="submit" className="modal-primary-btn">
+                    <button type="submit" className="modal-primary-btn" disabled={isSubmitting}>
                       <Send size={18} />
-                      <span>Request a Digital Strategy</span>
+                      <span>{isSubmitting ? 'Sending Request...' : 'Request a Digital Strategy'}</span>
                     </button>
                   </div>
                 </form>

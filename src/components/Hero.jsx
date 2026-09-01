@@ -43,19 +43,56 @@ export default function Hero({ onRequestStrategy }) {
     setDropdownOpen(false);
   };
 
-  const handleSubmit = (e) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.name && !formData.phone) {
-      onRequestStrategy({
-        name: 'Prospective Partner',
-        phone: '+5 (250) 125 865',
-        service: formData.service || 'Brand Launch Studio'
-      });
-      return;
+    setIsSubmitting(true);
+
+    const partnerData = {
+      name: formData.name || 'Quick Inquiry Partner',
+      phone: formData.phone || 'Phone requested via Hero',
+      service: formData.service || 'Brand Launch Studio'
+    };
+
+    try {
+      const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+      if (accessKey) {
+        await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json'
+          },
+          body: JSON.stringify({
+            access_key: accessKey,
+            subject: `Hero Quick Strategy Request - ${partnerData.name}`,
+            from_name: 'Vahlay Digital Hero Form',
+            name: partnerData.name,
+            phone: partnerData.phone,
+            service: partnerData.service,
+            message: 'Quick Strategy Inquiry submitted from the Hero Section bar on Vahlay Digital'
+          })
+        });
+      }
+      // Backup to browser storage
+      try {
+        const stored = JSON.parse(localStorage.getItem('vahlay_leads') || '[]');
+        stored.push({ ...partnerData, timestamp: new Date().toISOString() });
+        localStorage.setItem('vahlay_leads', JSON.stringify(stored));
+      } catch (err) {
+        // ignore localStorage errors
+      }
+    } catch (err) {
+      console.error('Hero lead submit error:', err);
+    } finally {
+      setIsSubmitting(false);
+      setSubmitted(true);
+      if (onRequestStrategy) {
+        onRequestStrategy(formData.name || formData.phone ? formData : partnerData);
+      }
+      setTimeout(() => setSubmitted(false), 4500);
     }
-    onRequestStrategy(formData);
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 4000);
   };
 
   return (
@@ -160,8 +197,8 @@ export default function Hero({ onRequestStrategy }) {
           </div>
 
           {/* Submit Button with Gold Trim */}
-          <button type="submit" id="request-strategy-btn" className="inquiry-submit-btn">
-            <span>Request a Digital Strategy</span>
+          <button type="submit" id="request-strategy-btn" className="inquiry-submit-btn" disabled={isSubmitting}>
+            <span>{isSubmitting ? 'Sending...' : 'Request a Digital Strategy'}</span>
           </button>
         </form>
 
