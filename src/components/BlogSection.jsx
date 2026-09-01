@@ -463,16 +463,17 @@ export default function BlogSection({ onOpenContact }) {
             <ChevronRight size={18} />
           </button>
         </div>
+      </div>
 
-        {/* Article Reader Modal matching the exact Split UI Design */}
-        {readingArticle && (
+      {/* Article Reader Modal matching the exact Split UI Design */}
+      {readingArticle && (
+        <div 
+          className="modal-backdrop gp-reader-backdrop" 
+          onClick={() => setReadingArticle(null)}
+          data-lenis-prevent="true"
+        >
           <div 
-            className="modal-backdrop active gp-reader-backdrop" 
-            onClick={() => setReadingArticle(null)}
-            data-lenis-prevent="true"
-          >
-            <div 
-              className="gp-reader-modal" 
+            className="gp-reader-modal" 
               onClick={(e) => e.stopPropagation()}
               data-lenis-prevent="true"
             >
@@ -658,7 +659,6 @@ export default function BlogSection({ onOpenContact }) {
           </div>
         )}
 
-      </div>
     </section>
   );
 }
