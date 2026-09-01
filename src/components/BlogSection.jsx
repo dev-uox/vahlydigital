@@ -20,12 +20,12 @@ import {
   Play
 } from 'lucide-react';
 
-import blogAiImg from '../assets/blog-ai-automation.png';
 import blogBrandImg from '../assets/blog-brand-launch.jpg';
-import blogWebImg from '../assets/blog-web-engineering.jpg';
-import blogAdsImg from '../assets/service-performance-ads.jpg';
-import blogSocialImg from '../assets/service-social-video.jpg';
-import blogDoodleAds from '../assets/service-doodle-ads.jpg';
+import blogAdsImg from '../assets/blog-gen-ads.png';
+import blogWebImg from '../assets/blog-gen-web.png';
+import blogAiImg from '../assets/blog-gen-ai.jpg';
+import blogSocialImg from '../assets/blog-gen-social.png';
+import blogCroImg from '../assets/blog-gen-cro.jpg';
 
 export default function BlogSection({ onOpenContact }) {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -271,7 +271,7 @@ export default function BlogSection({ onOpenContact }) {
       readTime: '6 min read',
       author: 'Priya Mehta',
       authorRole: 'Performance Marketing Director',
-      image: blogDoodleAds,
+      image: blogCroImg,
       callout: {
         title: 'Why micro-commitments work',
         desc: 'Interactive diagnostic scorecards convert cold traffic at 2.4x the rate of traditional static landing pages.'
