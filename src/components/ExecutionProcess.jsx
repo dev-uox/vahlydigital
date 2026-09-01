@@ -201,9 +201,9 @@ export default function ExecutionProcess() {
                 <div className="doodle-card-header">
                   <h4 className="doodle-card-title">Discovery & Market Audit</h4>
                 </div>
-                <span className="doodle-card-sub subtitle-cyan">IN-DEPTH RESEARCH</span>
+                <span className="doodle-card-sub subtitle-cyan">RESEARCH & COMPETITOR VOIDS</span>
                 <p className="doodle-card-desc">
-                  Audience research, technical audit and competitor gaps.
+                  Auditing competitor blind spots, buyer psychology, and high-intent revenue voids.
                 </p>
               </div>
             </div>
@@ -222,9 +222,9 @@ export default function ExecutionProcess() {
                 <div className="doodle-card-header">
                   <h4 className="doodle-card-title">Creative & Strategy Blueprint</h4>
                 </div>
-                <span className="doodle-card-sub subtitle-orange">DESIGN & DIRECTION</span>
+                <span className="doodle-card-sub subtitle-orange">VISUAL IDENTITY & FUNNELS</span>
                 <p className="doodle-card-desc">
-                  Brand direction, wireframes and campaign strategy.
+                  Crafting bespoke typography tokens, interactive Figma UI, and multi-stage ad funnels.
                 </p>
               </div>
             </div>
@@ -242,9 +242,9 @@ export default function ExecutionProcess() {
                 <div className="doodle-card-header">
                   <h4 className="doodle-card-title">Rapid Engineering & Launch</h4>
                 </div>
-                <span className="doodle-card-sub subtitle-coral">PRODUCTION & ROLLOUT</span>
+                <span className="doodle-card-sub subtitle-coral">SUB-SECOND CODE & 4K MEDIA</span>
                 <p className="doodle-card-desc">
-                  High-speed web builds, tracking and multi-channel launch.
+                  Deploying lightning React storefronts, CAPI server telemetry, and broadcast 4K reels.
                 </p>
               </div>
             </div>
@@ -262,9 +262,9 @@ export default function ExecutionProcess() {
                 <div className="doodle-card-header">
                   <h4 className="doodle-card-title">Performance Scaling & AI Tuning</h4>
                 </div>
-                <span className="doodle-card-sub subtitle-green">CONTINUOUS GROWTH</span>
+                <span className="doodle-card-sub subtitle-green">DETERMINISTIC ROAS & CRM</span>
                 <p className="doodle-card-desc">
-                  ROAS optimization, funnel testing and automation.
+                  Algorithmic bid scaling, high-frequency A/B testing, and sub-60s WhatsApp AI qualification.
                 </p>
               </div>
             </div>

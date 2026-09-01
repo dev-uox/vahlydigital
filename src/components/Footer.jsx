@@ -43,7 +43,7 @@ export default function Footer({ onOpenContact, onNavigate }) {
 
         {/* Top Centered Section: Eyebrow + Giant Title */}
         <div className="footer-hero-center">
-          <p className="footer-lime-eyebrow">Get's Started a Projects?</p>
+          <p className="footer-lime-eyebrow">READY TO SCALE YOUR BRAND?</p>
 
           <h2
             className="footer-giant-heading"

@@ -20,7 +20,7 @@ export default function BrandStatement({ onOpenContact }) {
           </div>
 
           <h2 className="aleric-statement-quote">
-            "We engineer magnetic brand identities, high-converting digital architectures, and aggressive performance marketing that scale modern businesses."
+            "We engineer magnetic visual identities, sub-second web experiences, and aggressive performance marketing engines designed to scale modern brands into undisputed category leaders."
           </h2>
 
           <div className="aleric-metrics-grid">

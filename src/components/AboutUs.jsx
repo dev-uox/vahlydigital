@@ -13,28 +13,30 @@ export default function AboutUs() {
     {
       num: '01.',
       icon: Zap,
-      title: 'High-Velocity Execution',
-      desc: 'We move fast and deliver turnkey results without bureaucratic lag.'
+      title: 'High-Velocity Sprints',
+      desc: 'We architect, test, and deploy entire brand ecosystems in 14-day rapid execution sprints without corporate lag.'
     },
     {
       num: '02.',
       icon: Target,
-      title: 'Revenue-First Philosophy',
-      desc: 'Every design and campaign is engineered for measurable pipeline growth.'
+      title: 'Deterministic ROI Scaling',
+      desc: 'Backed by server-side CAPI telemetry to ensure every dollar spent drives profitable, predictable revenue.'
     },
     {
       num: '03.',
       icon: Cpu,
-      title: 'Modern AI & Tech Stack',
-      desc: 'Sub-second web architectures and automated CRM pipelines that scale effortlessly.'
+      title: 'AI & Sub-Second Tech',
+      desc: 'Sub-second React web architectures, 4K cinema visuals, and sub-60s WhatsApp AI automation.'
     }
   ];
 
   const commitments = [
-    'Dedicated Senior Specialists',
-    '100% Transparent Communication',
-    'End-to-End Turnkey Delivery',
-    'Real-Time Revenue Telemetry'
+    'Server-Side CAPI First-Party Telemetry',
+    'Sub-Second React & Next.js Builds',
+    '4K Cinematic Reels & Motion Graphics',
+    'Speed-to-Lead WhatsApp AI Agents',
+    'Dedicated Senior Growth Architects',
+    'NDA-Protected Transparent Sprint Logs'
   ];
 
   return (

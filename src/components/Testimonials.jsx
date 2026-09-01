@@ -12,35 +12,35 @@ export default function Testimonials({ onOpenContact }) {
   const testimonials = [
     {
       id: 1,
-      quote: "Vahlay Digital engineered our complete brand launch, website, and ad strategy from the ground up. In just 90 days, our inbound pipeline grew by 240%. Highly recommended for any ambitious brand!",
+      quote: "Vahlay Digital engineered our complete brand identity, luxury e-commerce platform, and ad strategy from the ground up. In just 90 days, our qualified inbound pipeline grew by 240% with a 4.2x verified ROAS. Truly an elite strategic partner.",
       author: "Elena Rostova",
       role: "Founder & CEO, Horizon Luxe",
       avatar: avatar1
     },
     {
       id: 2,
-      quote: "Their performance marketing and automated WhatsApp CRM transformed our lead qualification. We went from manual email follow-ups to instant automated sales bookings within 60 seconds.",
+      quote: "Their performance marketing infrastructure and speed-to-lead WhatsApp AI transformed our sales operations. We transitioned from manual follow-ups to instant autonomous calendar bookings within 45 seconds of ad clicks.",
       author: "Marcus Vance",
       role: "Head of Growth, Apex SaaS",
       avatar: avatar2
     },
     {
       id: 3,
-      quote: "He’s a phenomenal designer! Their UX insights & pixel-perfect UI work helped us increase our user engagement by 30%. Highly recommended for any product team!",
-      author: "John Doe",
-      role: "CEO, Themepure",
+      quote: "Vahlay Digital delivered a masterclass in UI/UX and sub-second React architecture. Their bespoke web build boosted our visitor-to-lead conversion rate by 185% while securing perfect 99+ Core Web Vitals on mobile.",
+      author: "David Sterling",
+      role: "Managing Director, Sterling FinTech",
       avatar: avatar3
     },
     {
       id: 4,
-      quote: "The 4K Reels and 3D motion graphics they produced generated over 1.8M organic views in our first month alone. Truly broadcast-level visual storytelling that drives real brand authority.",
+      quote: "The 4K cinematic Reels and 3D motion graphics they produced generated over 2.4M organic views in our launch month. Unmatched visual storytelling that instantly established our brand authority.",
       author: "Sophia Bennett",
       role: "Creative Director, Aura Studio",
       avatar: avatar4
     },
     {
       id: 5,
-      quote: "From discovery to turnkey launch, the Vahlay team delivered our high-velocity web platform 2 weeks ahead of schedule with flawless Core Web Vitals. Unmatched execution speed.",
+      quote: "From initial market discovery to turnkey global launch, the Vahlay team delivered our high-velocity enterprise platform 2 weeks ahead of schedule. Their deterministic approach to growth is unlike any agency we've worked with.",
       author: "Jordan Smith",
       role: "Managing Partner, Velocity Capital",
       avatar: avatar5
