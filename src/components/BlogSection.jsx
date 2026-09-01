@@ -20,7 +20,7 @@ import {
   Play
 } from 'lucide-react';
 
-import blogBrandImg from '../assets/blog-brand-launch.jpg';
+import blogBrandImg from '../assets/blog-gen-brand.jpg';
 import blogAdsImg from '../assets/blog-gen-ads.png';
 import blogWebImg from '../assets/blog-gen-web.png';
 import blogAiImg from '../assets/blog-gen-ai.jpg';
