@@ -56,7 +56,9 @@ export default function Hero({ onRequestStrategy }) {
     };
 
     try {
+      const contactEmail = import.meta.env.VITE_CONTACT_EMAIL || 'info@vahlaydigital.com';
       const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+
       if (accessKey) {
         await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
@@ -68,6 +70,23 @@ export default function Hero({ onRequestStrategy }) {
             access_key: accessKey,
             subject: `Hero Quick Strategy Request - ${partnerData.name}`,
             from_name: 'Vahlay Digital Hero Form',
+            name: partnerData.name,
+            phone: partnerData.phone,
+            service: partnerData.service,
+            message: 'Quick Strategy Inquiry submitted from the Hero Section bar on Vahlay Digital'
+          })
+        });
+      } else if (contactEmail) {
+        await fetch(`https://formsubmit.co/ajax/${contactEmail}`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json'
+          },
+          body: JSON.stringify({
+            _subject: `Hero Quick Strategy Request - ${partnerData.name}`,
+            _template: 'table',
+            _captcha: 'false',
             name: partnerData.name,
             phone: partnerData.phone,
             service: partnerData.service,

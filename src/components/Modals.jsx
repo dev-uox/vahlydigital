@@ -63,7 +63,9 @@ export default function Modals({
     setIsSubmitting(true);
 
     try {
+      const contactEmail = import.meta.env.VITE_CONTACT_EMAIL || 'info@vahlaydigital.com';
       const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+
       if (accessKey) {
         await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
@@ -75,6 +77,26 @@ export default function Modals({
             access_key: accessKey,
             subject: `New Digital Strategy Request: ${formData.name || 'Valued Partner'}`,
             from_name: 'Vahlay Digital Strategy Portal',
+            name: formData.name,
+            phone: formData.phone,
+            email: formData.email || 'Not specified',
+            company: formData.company || 'Not specified',
+            service: formData.service || 'Brand Launch Studio',
+            timeline: formData.timeline,
+            message: formData.message || 'Strategy consultation requested via website modal'
+          })
+        });
+      } else if (contactEmail) {
+        await fetch(`https://formsubmit.co/ajax/${contactEmail}`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json'
+          },
+          body: JSON.stringify({
+            _subject: `New Digital Strategy Request: ${formData.name || 'Valued Partner'}`,
+            _template: 'table',
+            _captcha: 'false',
             name: formData.name,
             phone: formData.phone,
             email: formData.email || 'Not specified',
