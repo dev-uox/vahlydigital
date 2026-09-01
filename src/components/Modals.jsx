@@ -191,7 +191,7 @@ export default function Modals({
                   </div>
 
                   <div className="modal-input-group">
-                    <label>Work Email</label>
+                    <label>Work Email (Optional)</label>
                     <input
                       type="email"
                       placeholder="alex@company.com"
@@ -201,7 +201,7 @@ export default function Modals({
                   </div>
 
                   <div className="modal-input-group">
-                    <label>Company / Brand Name</label>
+                    <label>Company / Brand Name (Optional)</label>
                     <input
                       type="text"
                       placeholder="e.g. Acme Luxury Co."
