@@ -7,6 +7,7 @@ import ServiceDetailPage from './components/ServiceDetailPage';
 import AboutUs from './components/AboutUs';
 import ExecutionProcess from './components/ExecutionProcess';
 import BrandStatement from './components/BrandStatement';
+import PartnersClients from './components/PartnersClients';
 import Testimonials from './components/Testimonials';
 import BlogSection from './components/BlogSection';
 import FloatingDock from './components/FloatingDock';
@@ -52,18 +53,30 @@ export default function App() {
 
   // 2. Handle Browser URL Routing (Hash & Popstate)
   useEffect(() => {
+    const serviceTitles = {
+      'brand-launch': 'Branding Design & Brand Launch Studio | Vahlay Digital',
+      'social-video': 'Viral 4K Reels & Social Media Growth | Vahlay Digital',
+      'performance-marketing': 'Performance Marketing, Meta & Google Ads | Vahlay Digital',
+      'web-engineering': 'Full-Stack Web & Mobile App Engineering | Vahlay Digital',
+      'ai-automation': 'AI Automation & Speed-to-Lead Systems | Vahlay Digital'
+    };
+
     const handleLocationChange = () => {
       const hash = window.location.hash;
       if (hash.startsWith('#service/')) {
         const serviceId = hash.replace('#service/', '');
         setSelectedServiceId(serviceId);
         setActiveView('service-detail');
+        if (serviceTitles[serviceId]) {
+          document.title = `${serviceTitles[serviceId]}`;
+        }
         if (window.lenis) {
           window.lenis.scrollTo(0, { immediate: true });
         }
         window.scrollTo(0, 0);
       } else {
         setActiveView('home');
+        document.title = 'Vahlay Digital — Top Digital Strategy, SEO & Growth Marketing Agency';
       }
     };
 
@@ -181,10 +194,13 @@ export default function App() {
             {/* 6. Minimalist Brand Statement & Commitments */}
             <BrandStatement onOpenContact={handleOpenContact} />
 
-            {/* 7. Client Testimonials & Stats Rings */}
+            {/* 7. Our Partners & We are Featured In Badges */}
+            <PartnersClients onOpenContact={handleOpenContact} />
+
+            {/* 8. Client Testimonials & Stats Rings */}
             <Testimonials onOpenContact={handleOpenContact} />
 
-            {/* 8. Articles & Growth Playbooks */}
+            {/* 9. Articles & Growth Playbooks */}
             <BlogSection onOpenContact={handleOpenContact} />
           </>
         )}

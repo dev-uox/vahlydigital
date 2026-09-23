@@ -1,49 +1,65 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import avatar1 from '../assets/avatar-1.jpg';
-import avatar2 from '../assets/avatar-2.jpg';
-import avatar3 from '../assets/avatar-3.jpg';
-import avatar4 from '../assets/avatar-4.jpg';
-import avatar5 from '../assets/avatar-5.jpg';
+import rkChokshiLogo from '../assets/rk-chokshi-chess.jpg';
+import downtownGamingLogo from '../assets/downtown-gaming-cafe.png';
+import anukulYogaLogo from '../assets/anukul-yoga-studio.png';
+import fusionDriveLogo from '../assets/fusion-drive.png';
+import radheGoldLogo from '../assets/radhe-gold-buyer.png';
+import vedanshiJewellersLogo from '../assets/vedanshi-jewellers.png';
+import kushBankerLogo from '../assets/kush-banker-dance.png';
 
 export default function Testimonials({ onOpenContact }) {
-  const [currentIndex, setCurrentIndex] = useState(2); // Start with quote 03
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const testimonials = [
     {
       id: 1,
-      quote: "Vahlay Digital engineered our complete brand identity, luxury e-commerce platform, and ad strategy from the ground up. In just 90 days, our qualified inbound pipeline grew by 240% with a 4.2x verified ROAS. Truly an elite strategic partner.",
-      author: "Elena Rostova",
-      role: "Founder & CEO, Horizon Luxe",
-      avatar: avatar1
+      quote: "Vahlay Digital revolutionized our student enrollment process. Their hyper-targeted local campaigns and social media positioning doubled our weekend academy registrations across Ahmedabad within 60 days. Truly a results-driven team.",
+      author: "RK Chokshi School of Chess",
+      role: "Founder & Head Coach • Sports & Chess Academy, Ahmedabad",
+      avatar: rkChokshiLogo
     },
     {
       id: 2,
-      quote: "Their performance marketing infrastructure and speed-to-lead WhatsApp AI transformed our sales operations. We transitioned from manual follow-ups to instant autonomous calendar bookings within 45 seconds of ad clicks.",
-      author: "Marcus Vance",
-      role: "Head of Growth, Apex SaaS",
-      avatar: avatar2
+      quote: "The buzz Vahlay Digital created for our esports tournaments and gaming lounge was incredible. Their high-energy reels and youth-targeted ad creatives drove a massive influx of gamers and weekend footfall to our cafe.",
+      author: "Downtown Gaming Cafe",
+      role: "Management Team • Gaming Lounge & Esports Arena, Gurukul",
+      avatar: downtownGamingLogo
     },
     {
       id: 3,
-      quote: "Vahlay Digital delivered a masterclass in UI/UX and sub-second React architecture. Their bespoke web build boosted our visitor-to-lead conversion rate by 185% while securing perfect 99+ Core Web Vitals on mobile.",
-      author: "David Sterling",
-      role: "Managing Director, Sterling FinTech",
-      avatar: avatar3
+      quote: "Vahlay Digital brought an extraordinary level of luxury and elegance to our fine jewelry showcases. Their festive social campaigns and digital cataloguing significantly boosted walk-ins and high-ticket customer inquiries.",
+      author: "Vedanshi Jewellers",
+      role: "Director • Luxury Fine Jewelry, Gota, Ahmedabad",
+      avatar: vedanshiJewellersLogo
     },
     {
       id: 4,
-      quote: "The 4K cinematic Reels and 3D motion graphics they produced generated over 2.4M organic views in our launch month. Unmatched visual storytelling that instantly established our brand authority.",
-      author: "Sophia Bennett",
-      role: "Creative Director, Aura Studio",
-      avatar: avatar4
+      quote: "From promoting our feature movie '21 Divas' to filling our dance workshops at Himalaya Mall, Vahlay Digital's creative direction and digital reach are phenomenal. They truly understand visual storytelling and entertainment marketing.",
+      author: "Kush Banker Dance Studio",
+      role: "Founder & Choreographer • The Red Flag Entertainment, Ahmedabad",
+      avatar: kushBankerLogo
     },
     {
       id: 5,
-      quote: "From initial market discovery to turnkey global launch, the Vahlay team delivered our high-velocity enterprise platform 2 weeks ahead of schedule. Their deterministic approach to growth is unlike any agency we've worked with.",
-      author: "Jordan Smith",
-      role: "Managing Partner, Velocity Capital",
-      avatar: avatar5
+      quote: "Their dedicated social media community growth and geo-targeted ads for our Hatha & Aerial Yoga classes helped us expand to full batch capacity across both our Science City and Bopal studios.",
+      author: "Anukul Yoga Studio",
+      role: "Founder • Yoga & Holistic Fitness, Science City & Bopal",
+      avatar: anukulYogaLogo
+    },
+    {
+      id: 6,
+      quote: "Our lead generation funnels for instant payouts and gold release services achieved an all-time high ROAS with Vahlay Digital. Transparent reporting and continuous ad optimization have made them an indispensable growth partner.",
+      author: "Shree Radhe Gold Buyer",
+      role: "Managing Partner • FinTech & Gold Trading, Gujarat",
+      avatar: radheGoldLogo
+    },
+    {
+      id: 7,
+      quote: "Vahlay Digital helped us package and market our commercial video production and creator reels across Gujarat. Their digital positioning and website craft brought us top-tier commercial brand contracts.",
+      author: "Fusion Drive",
+      role: "Creative Producer • Commercial Video Production & Motion, Ahmedabad",
+      avatar: fusionDriveLogo
     }
   ];
 

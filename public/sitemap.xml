@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://vahlaydigital.com/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://vahlaydigital.com/logo-512x512.png</image:loc>
+      <image:title>Vahlay Digital - Premier Digital Strategy &amp; Growth Agency</image:title>
+      <image:caption>Top Experts In Digital Strategy, SEO, Web Engineering, and AI Automation</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Service: Brand Launch & Creative -->
+  <url>
+    <loc>https://vahlaydigital.com/#service/brand-launch</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Service: Social Media & Video -->
+  <url>
+    <loc>https://vahlaydigital.com/#service/social-video</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Service: Performance Marketing & Ads -->
+  <url>
+    <loc>https://vahlaydigital.com/#service/performance-marketing</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Service: Web Engineering & Apps -->
+  <url>
+    <loc>https://vahlaydigital.com/#service/web-engineering</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Service: AI Content & Automation -->
+  <url>
+    <loc>https://vahlaydigital.com/#service/ai-automation</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- About Section -->
+  <url>
+    <loc>https://vahlaydigital.com/#about</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Services Section -->
+  <url>
+    <loc>https://vahlaydigital.com/#services</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Framework / Process Section -->
+  <url>
+    <loc>https://vahlaydigital.com/#process</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Partners & Testimonials Section -->
+  <url>
+    <loc>https://vahlaydigital.com/#testimonials</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Blog / Playbooks Section -->
+  <url>
+    <loc>https://vahlaydigital.com/#blog</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Industries We Serve Section -->
+  <url>
+    <loc>https://vahlaydigital.com/#industries</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- FAQ Knowledge Section -->
+  <url>
+    <loc>https://vahlaydigital.com/#faq</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Contact Section -->
+  <url>
+    <loc>https://vahlaydigital.com/#contact</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>

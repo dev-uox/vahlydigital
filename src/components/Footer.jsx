@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowUp, MapPin } from 'lucide-react';
-import footerLogo from '../assets/VahlayDigitftjal.png';
+import footerLogo from '../assets/VahlayDigital-icon.png';
 
 export default function Footer({ onOpenContact, onNavigate }) {
   const scrollToTop = (e) => {

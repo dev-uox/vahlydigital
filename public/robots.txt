@@ -1,0 +1,21 @@
+# Robots.txt for Vahlay Digital
+# https://vahlaydigital.com
+
+User-agent: *
+Allow: /
+Allow: /favicon.ico
+Allow: /favicon*.png
+Allow: /logo*.png
+Allow: /apple-touch-icon.png
+Allow: /site.webmanifest
+Disallow: /api/
+
+# Google Favicon Bot
+User-agent: Googlebot-Image
+Allow: /
+
+# Host
+Host: https://vahlaydigital.com
+
+# Sitemaps
+Sitemap: https://vahlaydigital.com/sitemap.xml

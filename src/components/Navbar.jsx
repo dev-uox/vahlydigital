@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import logoImg from '../assets/VahlayDigital.png';
-import footerLogoImg from '../assets/VahlayDigitftjal.png';
+import footerLogoImg from '../assets/VahlayDigital-icon.png';
 import { Phone, ChevronDown, Menu, X, ArrowRight } from 'lucide-react';
 
 export default function Navbar({ onOpenModal, onOpenContact, onNavigate }) {
@@ -47,6 +47,7 @@ export default function Navbar({ onOpenModal, onOpenContact, onNavigate }) {
       hasDropdown: true,
       items: [
         { title: 'About Vahlay Digital', desc: 'Our journey, mission and expert team', targetId: 'about' },
+        { title: 'Our Partners & Featured Badges', desc: 'Enterprise ecosystem & certified accreditations', targetId: 'partners' },
         { title: 'Execution Framework', desc: '4-step high velocity launch system', targetId: 'process' },
         { title: 'Client Transformations', desc: 'Verified client reviews & performance stats', targetId: 'testimonials' },
       ]
